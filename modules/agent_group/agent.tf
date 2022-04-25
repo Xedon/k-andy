@@ -7,7 +7,7 @@ resource "hcloud_server" "agent" {
   for_each = { for i in range(0, var.server_count) : "#${i}" => i }
   name     = "${var.cluster_name}-${var.group_name}-${each.value}-${local.agent_pet_names[each.value]}"
 
-  image       = data.hcloud_image.ubuntu.name
+  image       = data.hcloud_image.server_image.name
   server_type = var.server_type
   location    = element(var.server_locations, each.value)
 

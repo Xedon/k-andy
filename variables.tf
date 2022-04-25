@@ -158,3 +158,8 @@ locals {
     engine      = "k3s",
   }
 }
+
+variable "server_image" {
+  type    = string
+  default = "ubuntu-20.04"
+}

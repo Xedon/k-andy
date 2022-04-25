@@ -9,8 +9,8 @@ resource "hcloud_ssh_key" "provision_public" {
   labels     = local.common_labels
 }
 
-data "hcloud_image" "ubuntu" {
-  name = "ubuntu-20.04"
+data "hcloud_image" "server_image" {
+  name = var.server_image
 }
 
 locals {

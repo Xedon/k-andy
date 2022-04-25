@@ -27,6 +27,7 @@ module "agent_group" {
 
   server_count  = each.value.count
   server_type   = each.value.type
+  server_image  = var.server_image
   common_labels = local.common_labels
 
   additional_packages = concat(local.server_base_packages, var.server_additional_packages)

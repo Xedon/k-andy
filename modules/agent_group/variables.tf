@@ -74,3 +74,8 @@ variable "common_labels" {
   description = "Additional labels to add to server instances"
   default     = {}
 }
+
+variable "server_image" {
+  type    = string
+  default = "ubuntu-20.04"
+}
